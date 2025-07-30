@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: golden --default;
+}
+@plugin "daisyui/theme" {
+  name: "golden";
+  default: true;
+  color-scheme: light;
+
+  --color-primary: #907b5d;
+  --color-primary-content: #fffaf3;
+  --color-secondary: #4c5c4b;
+  --color-secondary-content: #f3f3ee;
+  --color-accent: #a46a47;
+  --color-accent-content: #fff5ee;
+  --color-neutral: #e2d5c2;
+  --color-neutral-content: #3a2f24;
+
+  --color-base-100: #f6f2ea;
+  --color-base-200: #e8e0d3;
+  --color-base-300: #d9cbbd;
+  --color-base-content: #1e1e1b;
+
+  --color-info: #6c7d93;
+  --color-info-content: #ffffff;
+  --color-success: #6d8b74;
+  --color-success-content: #f8fff6;
+  --color-warning: #d3a153;
+  --color-warning-content: #fffdf7;
+  --color-error: #7e4141;
+  --color-error-content: #fff1f1;
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+    --font-formal: "Habibi", serif;
+}
