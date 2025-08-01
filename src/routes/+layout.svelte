@@ -12,12 +12,12 @@
 	}
 	
 	const headerLinks: Link[] = [
-		{text: 'About Us', href: '/'},
+		/* {text: 'About Us', href: '/'},
 		{text: 'Staff', href: '/'},
 		{text: 'Mass Times', href: '/'},
 		{text: 'Sermons', href: '/'},
 		{text: 'Events', href: '/'},
-		{text: 'Visit', href: '/'},
+		{text: 'Visit', href: '/'}, */
 		{text: 'Donate', href: '/', give: true},
 	]
 

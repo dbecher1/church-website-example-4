@@ -104,14 +104,14 @@
 <Section>
     {@render mass_and_service()}
 </Section>
-
+<!-- 
 {@render banner('Upcoming Events', 'bg-secondary')}
 
 <Section>
     {#each events as e}
         {@render event_card(e)}
     {/each}
-</Section>
+</Section> -->
 
 <!-- {@render banner('Watch our Mass Livestream', 'bg-primary')}
 

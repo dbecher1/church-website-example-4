@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div class=''>
-                <div class='grid grid-cols-2 gap-4 md:px-8 md:gap-24 not-md:mt-8'>
-                    {#each [{text: 'Join Us', href: '/'}, {text: 'Learn More', href: ''}] as {text, href}}
+                <div class='grid grid-cols-3 gap-4 md:px-8 md:gap-24 not-md:mt-8'>
+                    {#each [{text: 'Join Us', href: '/'}, {text: 'Learn More', href: ''}, {text: 'Donate', href: ''}] as {text, href}}
                         <a {href} class='btn btn-outline btn-secondary btn-sm md:btn-lg px-4 text-secondary-content'>{text}</a>
                     {/each}
                 </div>
