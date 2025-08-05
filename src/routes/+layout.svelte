@@ -101,9 +101,12 @@
 		<nav>
 			<h6 class='footer-title'>Contact Us</h6>
 			<div>Phone: {CHURCH_INFO.CHURCH_NUMBER}</div>
-			<a href='/' class='link link-hover'>
+			<div>
+				Email: <a href='/' class='link link-hover'>
 				{CHURCH_INFO.CHURCH_EMAIL}
 			</a>
+			</div>
+			
 		</nav>
 		<nav>
 			<h6 class='footer-title'>Socials</h6>
