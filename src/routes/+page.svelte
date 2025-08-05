@@ -1,7 +1,7 @@
 <script lang="ts">
     import { CHURCH_INFO } from "$lib";
-    import LandingWithBg from "$lib/landing_with_bg.svelte";
     import Section from "$lib/section.svelte";
+    import smoothscroll from '$lib/smoothscroll';
 
     interface EventInfo {
         name: string;
@@ -46,21 +46,65 @@
     <title>{CHURCH_INFO.CHURCH_NAME} | Home</title>
 </svelte:head>
 
+{#snippet hero()}
+<div class='w-full md:h-128 lg:h-180 overflow-hidden relative font-formal'>
+    <img src='/bg1.jpg' alt='Church' class='object-cover object-center h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 brightness-40 contrast-125 -z-1 bg-black/80'/>
+    <div class='flex w-full h-full text-base-100 text-shadow-sm text-shadow-black/40 text-center'>
+        <div class='flex flex-col m-auto lg:max-w-1/2 gap-3 md:gap-6 bg-black/15 rounded-box p-16'>
+            <div class='text-3xl/8 md:text-4xl/10 lg:text-5xl/20 uppercase tracking-wide font-formal'>
+                Welcome to {CHURCH_INFO.CHURCH_NAME}
+            </div>
+            <div class='flex flex-col gap-2'>
+                <div class='italic text-red-600 md:text-xl/8 lg:text-2xl/11 w-5/8 mx-auto'>
+                    "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+                </div>
+                <div class='text-sm md:text-lg'>
+                    Matthew 11:28
+                </div>
+            </div>
+            <div class='mx-auto'>
+                <div class='grid grid-cols-2 gap-8 md:px-8 md:gap-24 not-md:mt-8 text-center'>
+                    {#each [{text: 'Join Us', href: '#info'}, {text: 'Donate', href: ''}] as {text, href}}
+                        <a {href} class='btn btn-sm md:btn-md lg:btn-lg btn-wide btn-secondary btn-outline text-center text-secondary-content'>{text}</a>
+                    {/each}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/snippet}
+
 {#snippet mass_and_service()}
-    <div class='flex flex-col lg:flex-row w-full md:px-12 md:py-4 md:justify-around lg:gap-0 gap-8'>
-        <img src='/rosary.jpg' alt='Rosary' class='not-lg:h-md'/>
-        <div class='px-6 md:px-4 min-w-sm max-w-lg md:w-xl my-auto flex-1'>
-            <div class='text-2xl font-formal font-semibold'>
+<!--
+    <section id='info' class='flex flex-col lg:flex-row w-full md:px-12 md:py-4 md:justify-around lg:gap-0'>
+        <img src='/rosary.jpg' alt='Rosary' class='w-46'/>
+        <div class='px-6 md:px-4 my-auto flex-1'>
+            <div class='not-lg:text-center text-lg md:text-xl lg:text-2xl font-formal font-semibold'>
                 Mass Times
             </div>
-            <div class='grid grid-cols-2 py-4 gap-2 lg:gap-4'>
+            <div class='grid grid-cols-2 py-4 lg:gap-4'>
                 {#each mass as [day, service]}
                     <span class='w-sm'>{day}:</span>
                     <span class='max-w-md'>{@html service}</span>
                 {/each}
             </div>
         </div>
-    </div>
+    </section>
+    -->
+    <section id='info' class='grid grid-cols-2'>
+        <img src='/rosary.jpg' alt='Rosary' class='w-120 mx-auto md:mx-0 col-span-2 md:col-span-1'/>
+        <div class='col-span-2 md:col-span-1 p-2'>
+            <div class='text-center text-lg font-semibold'>
+                Mass Times
+            </div>
+            <div class='p-4 grid grid-cols-2'>
+                {#each mass as [day, service]}
+                    <span class='p-1'>{day}:</span>
+                    <span class='p-1'>{@html service}</span>
+                {/each}
+            </div>
+        </div>
+    </section>
 {/snippet}
 
 {#snippet banner(text: string, bg: string)}
@@ -99,7 +143,7 @@
 
 <!-- CONTENT HERE -->
 
-<LandingWithBg/>
+{@render hero()}
 
 <Section>
     {@render mass_and_service()}
