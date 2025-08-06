@@ -64,8 +64,7 @@
             </div>
             <div class='mx-auto'>
                 <div class='grid grid-cols-2 gap-8 md:px-8 md:gap-24 not-md:mt-8 text-center'>
-                    <a href='#info' class='btn btn-sm md:btn-md lg:btn-lg btn-wide btn-secondary text-center text-secondary-content'>Join Us</a>
-                    <a href='/' class='btn btn-sm md:btn-md lg:btn-lg btn-wide btn-secondary text-center text-secondary-content'>Donate</a>
+                    <a href='/' class='btn btn-sm md:btn-md lg:btn-lg btn-wide btn-secondary text-center text-secondary-content col-span-2'>Donate</a>
                 </div>
             </div>
         </div>
